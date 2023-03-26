@@ -2,11 +2,12 @@ import getpass
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os
 import glob
 from tqdm import tqdm
+import subprocess
 
 #Adobe
 #Zips
@@ -17,9 +18,14 @@ from tqdm import tqdm
 #UltraVNC
 
 links = ['https://get.adobe.com/br/reader/download?os=Windows+11&name=Reader+DC+2023.001.20064+Brazilian+Windows%2864Bit%29&lang=br&nativeOs=Linux+x86_64&accepted=&declined=&preInstalled=&site=otherversions',
-'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-621.exe','https://7-zip.org/a/7z2201-x64.exe','https://javadl.oracle.com/webapps/download/AutoDL?BundleId=247917_0ae14417abb444ebb02b9815e2103550','https://uvnc.com/component/jdownloads/send/0-/438-ultravnc-1409-x64-setup.html?Itemid=0','https://anydesk.com/pt/downloads/windows?dv=win_exe']
+'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-621.exe',
+'https://7-zip.org/a/7z2201-x64.exe',
+'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=247917_0ae14417abb444ebb02b9815e2103550',
+'https://uvnc.com/component/jdownloads/send/0-/438-ultravnc-1409-x64-setup.html?Itemid=0',
+'https://anydesk.com/pt/downloads/windows?dv=win_exe']
+
 #Navegador
-navegador = webdriver.Chrome(ChromeDriverManager().install())
+navegador = webdriver.Chrome()
 #Configurações
 navegador.maximize_window()
 
@@ -46,12 +52,16 @@ def baixar_programas(link):
         time.sleep(8)
 
 
-def instalar_office():
-    pass
+def winget_updates():
+    #instalando o winget
+    time.sleep(2)
+    os.system('cmd /c "Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe"')
+    time.sleep(4)
+    #atualizando tudo
+    os.system('cmd /c "winget upgrade --all"')
 
 
 baixar_programas(links)
-checar()
-
+winget_updates()
 
 
