@@ -10,7 +10,8 @@ class Webmodule:
  'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=247917_0ae14417abb444ebb02b9815e2103550',
  'https://uvnc.com/component/jdownloads/send/0-/438-ultravnc-1409-x64-setup.html?Itemid=0',
  'https://anydesk.com/pt/downloads/windows?dv=win_exe',
- 'https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle',
+ 'https://github.com/microsoft/wingparent_obj.minsize(width=250, height=250)
+parent_obj.geometry("250x250")et-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle',
  'https://www.mozilla.org/pt-BR/firefox/download/thanks/']                         
    
     def checar_conexao(self):
