@@ -24,11 +24,14 @@ class Storage:
     def criar_lista(self):
         if x == 0:
             with open('database.txt', 'w') as f:
-                f.write("Teste")
+                f.write("")
             
         else:
             pass
-            
+
+#    def inserir_links(self,link):
+#        with open('database.txt',w)  as d:
+#            d.write(link)      
             
     
     

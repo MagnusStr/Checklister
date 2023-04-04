@@ -1,26 +1,17 @@
 import os
 import requests
-class Webmodule:
+import wget
 
-    #Metodos
-    def __init__(self):
-        links = ['https://get.adobe.com/br/reader/download?os=Windows+11&name=Reader+DC+2023.001.20064+Brazilian+Windows%2864Bit%29&lang=br&nativeOs=Linux+x86_64&accepted=&declined=&preInstalled=&site=otherversions',
- 'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-621.exe',
- 'https://7-zip.org/a/7z2201-x64.exe',
- 'https://javadl.oracle.com/webapps/download/AutoDL?BundleId=247917_0ae14417abb444ebb02b9815e2103550',
- 'https://uvnc.com/component/jdownloads/send/0-/438-ultravnc-1409-x64-setup.html?Itemid=0',
- 'https://anydesk.com/pt/downloads/windows?dv=win_exe',
- 'https://github.com/microsoft/wingparent_obj.minsize(width=250, height=250)
-parent_obj.geometry("250x250")et-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle',
- 'https://www.mozilla.org/pt-BR/firefox/download/thanks/']                         
+class Webmodule:             
    
     def checar_conexao(self):
         try:
             requests.get('https://www.google.com', timeout=5)
             return True
+            print("Essa máquina possui conexão com a internet!")
         except exceptions.ConnectionError:
             return False
-            
+            print("Essa máquina não possui conexão com a internet!")
     
     def checar_winget(self):
         dir = "C:\\Program Files\\WindowsApps\\"
@@ -29,9 +20,16 @@ parent_obj.geometry("250x250")et-cli/releases/download/v1.4.10173/Microsoft.Desk
         for i in list:
             if(i == winget):
                 print("Winget instalado na máquina!")
+
+
+    def download_apps(self):
+        with open(".\database.txt") as f:
+            lines = f.readlines()
+            for url in lines:
+                wget.download(url)
        
                 
 teste = Webmodule()
 teste.checar_conexao()
 teste.checar_winget()
-        
+teste.download_apps()

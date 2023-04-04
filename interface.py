@@ -1,8 +1,9 @@
 from tkinter import *
-
+from storage import Storage
 class Interface:
+
     def __init__(self):
-        #começo
+        
         self.janela = Tk()
         #configurações de janela
         self.janela.minsize(width=650, height=750)
@@ -12,7 +13,7 @@ class Interface:
         self.label = Label(self.janela, text="Teste")
         self.label.pack()
             #botão add/remove
-        self.add_btn = Button(self.janela, text="Adicionar Link",command=) #,command=
+        self.add_btn = Button(self.janela, text="Adicionar Link") #,command=
         self.add_btn.pack()
         self.rem_btn = Button(self.janela, text="Remover Link") #,command=
         self.rem_btn.pack()
@@ -20,7 +21,8 @@ class Interface:
         self.entrada.pack()
         #final
         self.janela.mainloop()
-        
+
+
         
 teste = Interface()
 teste.janela()
