@@ -1,1 +1,6 @@
-https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u361-b09/0ae14417abb444ebb02b9815e2103550/JavaSetup8u361.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u361-b09/0ae14417abb444ebb02b9815e2103550/JavaSetup8u361.exe&BHost=javadl.sun.com&File=JavaSetup8u361.exe&AuthParam=1680735989_17ddce4eec11912d04a9119428e10e0b&ext=.exe
+https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2300120064/AcroRdrDCx642300120064_pt_BR.exe
+https://www.7-zip.org/a/7z2201-x64.exe
+https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u361-b09/0ae14417abb444ebb02b9815e2103550/jre-8u361-windows-x64.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u361-b09/0ae14417abb444ebb02b9815e2103550/jre-8u361-windows-x64.exe&BHost=javadl.sun.com&File=jre-8u361-windows-x64.exe&AuthParam=1680737710_5d4d7d009073c5d1fec9d31fca300fbc&ext=.exe
+https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BED5AFC51-9F1C-3ABA-F4D6-7C1675BC2587%7D%26lang%3Dpt-BR%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe
+https://www.uvnc.eu/download/1400/UltraVNC_1_4_09_X64_Setup.exe
+https://download.anydesk.com/AnyDesk.exe
