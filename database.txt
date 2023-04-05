@@ -1,0 +1,1 @@
+https://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u361-b09/0ae14417abb444ebb02b9815e2103550/JavaSetup8u361.exe?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u361-b09/0ae14417abb444ebb02b9815e2103550/JavaSetup8u361.exe&BHost=javadl.sun.com&File=JavaSetup8u361.exe&AuthParam=1680735989_17ddce4eec11912d04a9119428e10e0b&ext=.exe
