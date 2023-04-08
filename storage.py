@@ -10,14 +10,10 @@ class Storage:
         arq = "database.txt"
         for i in listar:  
             if i == arq:
-                print("1")
-                print(i)
                 x = 1
                 
             else:
                 x = 0
-                print("0")
-                print(i)
   
         
     #criar txt
@@ -35,7 +31,3 @@ class Storage:
             
     
     
-        
-teste = Storage()
-teste.checar_links()
-teste.criar_lista()
