@@ -1,17 +1,9 @@
 import os
-import requests
 import wget
+
 class Webmodule:             
     global aux
     aux = 1
-    def checar_conexao(self):
-        try:
-            requests.get('https://www.google.com', timeout=5)
-            return True
-            print("Essa máquina possui conexão com a internet!")
-        except exceptions.ConnectionError:
-            return False
-            print("Essa máquina não possui conexão com a internet!")
     
     def checar_winget(self):
         dir = "C:\\Program Files\\WindowsApps\\"
@@ -35,8 +27,11 @@ class Webmodule:
 
 
     def download_apps(self):
-        with open(".\database.txt") as f:
+        print("Baixando os programas...\n")
+        with open("database.txt") as f:
             lines = f.readlines()
-            print("Baixando os programas...\n")
             for url in lines:
                 wget.download(url)
+
+teste = Webmodule()
+teste.download_apps()
