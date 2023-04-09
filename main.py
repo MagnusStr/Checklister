@@ -6,8 +6,10 @@ from webmodule import Webmodule
  
 web = Webmodule()
 files = Storage()        
-files.checar_links()
-files.criar_lista()
+if(files.checar_links() == False):
+    files.criar_lista()
+
+
 print("Baixando programas\n")
 web.download_apps() 
 if (web.checar_winget() == True):
@@ -21,6 +23,6 @@ else:
     print("Baixando winget!\n")
     url = "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
     wget.download(url)
-    
+    os.system('cmd /k"winget upgrade --all"')
    
 

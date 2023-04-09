@@ -1,8 +1,5 @@
 import os
 class Storage:  
-
-    global x
-    x = 0
     #checar se existe txt
     def checar_links(self):
         diretorio = os.getcwd()
@@ -10,20 +7,16 @@ class Storage:
         arq = "database.txt"
         for i in listar:  
             if i == arq:
-                x = 1
-                
+                return True
             else:
-                x = 0
+                return False
   
-        
+
     #criar txt
     def criar_lista(self):
-        if x == 0:
             with open('database.txt', 'w') as f:
                 f.write("")
-            
-        else:
-            pass
+
 
 #    def inserir_links(self,link):
 #        with open('database.txt',w)  as d:
