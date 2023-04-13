@@ -33,11 +33,19 @@ class Webmodule:
 
 
     def download_apps(self):
-        print("Baixando os programas...\n")
-        with open("database.txt") as f:
+        with open("database.txt", 'r') as f:
             lines = f.readlines()
-            for url in lines:
-                wget.download(url)
+        os.mkdir("Programas")
+        os.chdir(".\Programas")
+        for url in lines:
+            wget.download(url)
+            time.sleep(2)
+        
+        n_path = os.getcwd()
+        #Instalar Programas
+        for a in n_path:
+            
+
 
 web = Webmodule()
 files = Storage()        
@@ -49,12 +57,9 @@ print("Baixando programas\n")
 web.download_apps() 
 if (web.checar_winget() == True):
     print("Winget instalado na máquina!\n")
-    print("Ao fim das instalações o winget atualizará todos os pacotes ;)")
-    time.sleep(390)
-    os.system('cmd /k"winget upgrade --all"')
-    print("Todos os pacotes foram atualizados")
+    
+
 else:
     print("Winget não instalado na máquina\n")
     print("Baixando winget!\n")
-    url = "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
-    wget.download(url)
+   
