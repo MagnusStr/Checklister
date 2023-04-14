@@ -12,12 +12,12 @@ class Storage:
             if i == arq:
                 return True
             else:
-                return False  
+                return False
 
     #criar txt
     def criar_lista(self):
             with open('database.txt', 'w') as f:
-                f.write("https://github.com/MagnusStr/tests-n-drafts/archive/refs/heads/main.zip")
+                f.write("")
 
 class Webmodule:             
 
@@ -35,31 +35,21 @@ class Webmodule:
     def download_apps(self):
         with open("database.txt", 'r') as f:
             lines = f.readlines()
-        os.mkdir("Programas")
-        os.chdir(".\Programas")
+        os.mkdir("Downloads")
+        os.chdir(".\Downloads")
         for url in lines:
             wget.download(url)
-            time.sleep(2)
-        
-        n_path = os.getcwd()
-        #Instalar Programas
-        for a in n_path:
-            
-
+            time.sleep(3)
+        arq_p = os.listdir()
+        for m in arq_p:
+            os.system("start /wait {}".format(m))
 
 web = Webmodule()
 files = Storage()        
 if(files.checar_links() == False):
     files.criar_lista()
 
-
-print("Baixando programas\n")
-web.download_apps() 
-if (web.checar_winget() == True):
-    print("Winget instalado na máquina!\n")
-    
-
-else:
-    print("Winget não instalado na máquina\n")
-    print("Baixando winget!\n")
+print("Baixando programas...\n")
+web.download_apps()
+os.system("winget upgrade --all")
    
